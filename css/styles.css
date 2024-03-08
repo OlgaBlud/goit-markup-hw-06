@@ -90,12 +90,13 @@ img {
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
-
 .page-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* menu btn */
 .menu-button {
   width: 26px;
   height: 26px;
@@ -111,66 +112,50 @@ img {
 .menu-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-button:hover > .menu-icon {
+.menu-button:hover > .menu-icon,
+.menu-button:focus > .menu-icon {
   fill: #404bbf;
 }
-.page-menu,
+/* links & address */
+.page-menu-list,
 .contacts {
   display: none;
-  /* display: flex;
-  gap: 40px; */
-}
-.page-navigation > .logo {
-  margin-right: 76px;
-}
-.nav-links,
-.contact-link {
-  display: block;
-  padding: 24px 0;
 }
 
-.nav-links {
-  position: relative;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+/* nav link */
+.nav-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: #2e2f42;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-links.active {
+
+.nav-link:hover,
+.nav-link:focus {
   color: #404bbf;
-}
-.nav-links:hover,
-.nav-links:focus {
-  color: #404bbf;
-}
-.nav-links.active::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0px;
-  bottom: -1px;
-  background-color: #404bbf;
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
 }
 
+/* contact link */
 .contact-link {
-  font-weight: 400;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 1.5;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
+  font-style: normal;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contact-link:hover,
-.contact-link:focus {
+.contact-link:focus,
+.accent-color {
   color: #404bbf;
 }
 /* #endregion */
+
 /* #region  modal menu*/
 .menu-backdrop {
   position: fixed;
@@ -189,13 +174,32 @@ img {
   left: 50%;
   transform: translateX(-50%);
   width: 320px;
-  height: 100%;
+  min-height: 100%;
   padding: 72px 24px 40px 16px;
 }
-
-.accent {
-  color: #404bbf;
+.modal-navigation-contact-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 168px;
+  margin-bottom: 48px;
 }
+.modal-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* margin-bottom: 168px; */
+}
+.modal-social-media-links-list {
+  display: flex;
+  gap: 40px;
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 /* #endregion */
 
 /* #region  modal close-btn*/
@@ -215,6 +219,9 @@ img {
   padding: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn-menu {
+  background-color: transparent;
 }
 .close-button:hover,
 .close-button:focus {
@@ -769,7 +776,64 @@ img {
   .container {
     max-width: 768px;
   }
+  .menu-button {
+    display: none;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-navigation > .logo {
+    margin-right: 120px;
+  }
+  .page-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .nav-link.active {
+    color: #404bbf;
+  }
+  .nav-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    display: block;
+    padding: 24px 0;
+  }
+  .nav-link.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+  }
+
+  .contacts {
+    display: block;
+  }
+  .contact-list {
+    gap: 12px;
+  }
 }
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .contact-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    padding: 8px 0;
+  }
+}
+
 /* #endregion */
 
 /* #region  desktop media */
@@ -779,6 +843,18 @@ img {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .page-navigation > .logo {
+    margin-right: 76px;
+  }
+  .contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .contact-list {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 /* #endregion */
 
@@ -786,29 +862,8 @@ img {
 
 
 
-/* Tablet 
+ Tablet 
 
 
 
-/* Desktop
-
-
-
-*/
-
-/* 
-«A1» При перегляді сторінки на будь-якому пристрої шириною від 320px, не з'являється горизонтальна смуга прокручування.
-
-«B2»  Верстка виконана щодо трьох точок перелому: 320px, 768px і 1158px.
-«B3» Всі фонові і контентні растрові зображення — респонсивні і підтримують екрани щільністю x1 и x2.
-«B4» Для респонсивних фонових зображень використані медіа-функція min-resolution.
-
-Мобильное меню
-«C1» Виконана розмітка всіх елементів мобільного меню.
-«C2» Виконано оформлення всіх елементів мобільного меню.
-«C3» Ширина меню відповідає макету.
-«C4» За висотою меню займає весь в'юпорт.
-«C5» Спочатку меню приховано.
-«C6» Якщо додати на елемент меню клас is-open, воно з'являється.
-
-*/
+Desktop */

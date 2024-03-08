@@ -23,7 +23,7 @@
     <!--_______________________________________________  header  ____________________________________________ -->
 
     <header class="page-header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="page-navigation">
           <a href="./index.html" class="logo">
             Web
@@ -34,17 +34,17 @@
               <use href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
-          <ul class="page-menu">
+          <ul class="page-menu-list">
             <li class="page-menu-item">
-              <a href="./index.html" target="_blank" class="nav-links active">
+              <a href="./index.html" target="_blank" class="nav-link active">
                 Studio
               </a>
             </li>
             <li class="page-menu-item">
-              <a href="" target="_blank" class="nav-links">Portfolio</a>
+              <a href="" target="_blank" class="nav-link">Portfolio</a>
             </li>
             <li class="page-menu-item">
-              <a href="" target="_blank" class="nav-links">Contacts</a>
+              <a href="" target="_blank" class="nav-link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -513,39 +513,49 @@
     <!--___________________________________________________  modal menu ___________________________________________ -->
     <div class="menu-backdrop is-hidden" menu-modal>
       <div class="modal-menu">
-        <button class="close-button" type="button" menu-modal-close>
+        <button
+          class="close-button close-btn-menu"
+          type="button"
+          menu-modal-close
+        >
           <svg class="cross-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <ul class="modal-menu-list">
-          <li class="modal-menu-item">
-            <a href="./index.html" target="_blank" class="nav-links accent">
-              Studio
-            </a>
-          </li>
-          <li class="page-menu-item">
-            <a href="" target="_blank" class="nav-links">Portfolio</a>
-          </li>
-          <li class="page-menu-item">
-            <a href="" target="_blank" class="nav-links">Contacts</a>
-          </li>
-        </ul>
-        <address class="modal-contacts">
-          <ul class="contact-list">
-            <li class="contact-list-item">
-              <a href="tel:+110001111111" class="contact-link accent"
-                >+11 (000) 111-11-11</a
+        <div class="modal-navigation-contact-wrap">
+          <ul class="modal-menu-list">
+            <li class="page-menu-item">
+              <a
+                href="./index.html"
+                target="_blank"
+                class="nav-link accent-color"
               >
+                Studio
+              </a>
             </li>
-            <li class="contact-list-item">
-              <a href="mailto:info@devstudio.com" class="contact-link"
-                >info@devstudio.com</a
-              >
+            <li class="page-menu-item">
+              <a href="" target="_blank" class="nav-link">Portfolio</a>
+            </li>
+            <li class="page-menu-item">
+              <a href="" target="_blank" class="nav-link">Contacts</a>
             </li>
           </ul>
-        </address>
-        <ul class="social-media-links-list">
+          <address class="modal-contacts">
+            <ul class="contact-list">
+              <li class="contact-list-item">
+                <a href="tel:+110001111111" class="contact-link accent-color"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contact-list-item">
+                <a href="mailto:info@devstudio.com" class="contact-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <ul class="modal-social-media-links-list">
           <li class="social-media-links-list-item">
             <a href="" class="social-media-link">
               <svg class="social-media-icon" width="24" height="24">
@@ -577,6 +587,7 @@
         </ul>
       </div>
     </div>
+
     <!--___________________________________________________  backdrop  ___________________________________________ -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-container">
