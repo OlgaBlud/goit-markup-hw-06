@@ -33,7 +33,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* #endregion */
+/* #endregion global*/
 
 /* #region  general styles*/
 
@@ -81,7 +81,7 @@ img {
   }
 }
 
-/* #endregion */
+/* #endregion general styles*/
 
 /* #region logo */
 .logo {
@@ -99,7 +99,7 @@ img {
 .logo-light-text {
   color: #f4f4fd;
 }
-/* #endregion */
+/* #endregion logo*/
 
 /* #region social-media icons */
 
@@ -126,7 +126,7 @@ img {
 .social-media-icon {
   fill: #f4f4fd;
 }
-/* #endregion */
+/* #endregion social-media icons*/
 
 /* #region header */
 
@@ -240,7 +240,7 @@ img {
   }
 }
 
-/* #endregion */
+/* #endregion header*/
 
 /* #region  modal menu*/
 @media only screen and (max-width: 767px) {
@@ -327,33 +327,7 @@ img {
     gap: 40px;
   }
 }
-/* 
-
-
-.modal-navigation-contact-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 168px;
-  margin-bottom: 48px;
-}
-.modal-menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  
-}
-.modal-social-media-links-list {
-  display: flex;
-  gap: 40px;
-}
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-} */
-
-/* #endregion */
+/* #endregion modal menu*/
 
 /* #region  main section*/
 .main-section {
@@ -470,19 +444,11 @@ img {
   }
 }
 
-/* #endregion */
+/* #endregion main section*/
 
 /* #region sections global */
 .section-paddings {
-}
-.section-title {
-}
-.section-sub-title {
-}
-.section-text {
-}
-/* .section-paddings {
-  padding: 120px 0;
+  padding: 96px;
 }
 .section-title {
   font-weight: 700;
@@ -495,29 +461,37 @@ img {
   margin-bottom: 72px;
 }
 .section-sub-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .section-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-} */
-
-/* #endregion */
-/* =========================================
-
-============================================
-
-===========================================desktop
-
-=========================================
-
-============================================*/
+}
+@media only screen and (min-width: 768px) {
+  .section-paddings {
+    padding: 120px 0;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-sub-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .section-text {
+    font-weight: 400;
+  }
+}
+/* #endregion sections global */
 
 /* #region advantages */
 /* .advantages-list {
@@ -546,6 +520,16 @@ img {
 } */
 
 /* #endregion */
+
+/* =========================================
+
+============================================
+
+===========================================desktop
+
+=========================================
+
+============================================*/
 
 /* #region team */
 /* .team-section {
