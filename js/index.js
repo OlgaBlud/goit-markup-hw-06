@@ -1,17 +1,21 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+// subscription
 
-  refs.openModalBtn.addEventListener('click', toggleModalMenu);
-  refs.closeModalBtn.addEventListener('click', toggleModalMenu);
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector('[data-modal-open]'),
+//     closeModalBtn: document.querySelector('[data-modal-close]'),
+//     modal: document.querySelector('[data-modal]'),
+//   };
 
-  function toggleModalMenu() {
-    refs.modal.classList.toggle('is-open');
-  }
-})();
+//   refs.openModalBtn.addEventListener('click', toggleModal);
+//   refs.closeModalBtn.addEventListener('click', toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle('is-open');
+//   }
+// })();
+
+// modal menu
 
 (() => {
   const refs = {
@@ -20,10 +24,10 @@
     modal: document.querySelector('[menu-modal]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtn.addEventListener('click', toggleModalMenu);
+  refs.closeModalBtn.addEventListener('click', toggleModalMenu);
 
-  function toggleModal() {
+  function toggleModalMenu() {
     refs.modal.classList.toggle('is-open');
   }
 })();
