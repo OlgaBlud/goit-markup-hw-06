@@ -606,7 +606,7 @@
     <!--___________________________________________________  modal menu ___________________________________________ -->
     <div class="backdrop-menu is-hidden" menu-modal>
       <div class="container modal-menu">
-        <button class="menu-close-button" type="button" menu-modal-close>
+        <button class="modal-close-btn" type="button" menu-modal-close>
           <svg
             class="cross-icon"
             width="8"
@@ -698,7 +698,7 @@
     <!--___________________________________________________  backdrop form  ___________________________________________ -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-container">
-        <button class="close-button" type="button" data-modal-close>
+        <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="cross-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -717,7 +717,12 @@
                 title="Enter your name"
                 required
               />
-              <svg class="modal-input-icon" width="18" height="24">
+              <svg
+                class="modal-input-icon"
+                width="18"
+                height="24"
+                aria-label="man icon"
+              >
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
@@ -735,7 +740,12 @@
                 title="xxx-xxx-xx-xx"
                 required
               />
-              <svg class="modal-input-icon" width="18" height="24">
+              <svg
+                class="modal-input-icon"
+                width="18"
+                height="24"
+                aria-label="phone icon"
+              >
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
@@ -751,7 +761,12 @@
                 name="user-email"
                 required
               />
-              <svg class="modal-input-icon" width="18" height="24">
+              <svg
+                class="modal-input-icon"
+                width="18"
+                height="24"
+                aria-label="icon mail"
+              >
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
